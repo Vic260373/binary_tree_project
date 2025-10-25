@@ -10,6 +10,6 @@ add_executable(main src/main.cpp)
 # Подключаем GoogleTest из системы
 find_package(Threads REQUIRED)
 
-add_subdirectory(tests)
-
+# Включаем поддержку тестов
 enable_testing()
+add_subdirectory(tests)
