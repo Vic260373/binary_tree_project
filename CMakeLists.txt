@@ -7,12 +7,9 @@ include_directories(include)
 
 add_executable(main src/main.cpp)
 
-include(FetchContent)
-FetchContent_Declare(
-  googletest
-  URL https://github.com/google/googletest/archive/release-1.14.0.zip
-)
-FetchContent_MakeAvailable(googletest)
+# Подключаем GoogleTest из системы
+find_package(Threads REQUIRED)
+
+add_subdirectory(tests)
 
 enable_testing()
-add_subdirectory(tests)
