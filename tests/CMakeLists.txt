@@ -3,6 +3,6 @@ set(TEST_SOURCES
 )
 
 add_executable(runTests ${TEST_SOURCES})
-target_link_libraries(runTests gtest gtest_main)
+target_link_libraries(runTests gtest gtest_main Threads::Threads)
 include(GoogleTest)
 gtest_discover_tests(runTests)
